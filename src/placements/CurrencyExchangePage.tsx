@@ -1,20 +1,8 @@
-import * as React from "react";
-import {
-  StyledWrapper,
-  StyledCircularBG,
-  StyledContentContainer,
-} from "./CurrencyExchangePage.styles";
+import React from "react";
+import CurrencyExchangePageWrapper from "./CurrencyExchangePageWrapper";
 
-export interface CurrencyExchangePageProps {}
+interface CurrencyExchangePageProps {}
 
-const CurrencyExchangePage: React.SFC<CurrencyExchangePageProps> = () => {
-  return (
-    <StyledWrapper>
-      <StyledCircularBG>
-        <StyledContentContainer>Hello</StyledContentContainer>
-      </StyledCircularBG>
-    </StyledWrapper>
-  );
+export const CurrencyExchangePage = () => {
+  return <CurrencyExchangePageWrapper>Hello World</CurrencyExchangePageWrapper>;
 };
-
-export default CurrencyExchangePage;

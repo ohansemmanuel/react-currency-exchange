@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./placements/CurrencyExchangePage";
+import { CurrencyExchangePage } from "./placements";
 import * as serviceWorker from "./serviceWorker";
+import "./index.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <CurrencyExchangePage />
   </React.StrictMode>,
   document.getElementById("root")
 );
