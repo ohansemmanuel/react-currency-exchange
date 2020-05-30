@@ -11,5 +11,12 @@ export const CurrencySwapContainer = () => {
     dispatch(reverseActiveCurrencies());
   };
 
-  return <Button onClick={handleCurrencySwap}>⇅</Button>;
+  return (
+    <Button
+      onClick={handleCurrencySwap}
+      style={{ width: "30px", height: "30px", borderRadius: "50%" }}
+    >
+      ⇅
+    </Button>
+  );
 };
