@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { media } from "../utils/responsiveStyledComponents";
+import { BLUE } from "../colors";
 
 export const StyledWrapper = styled.div`
   display: flex;
@@ -12,7 +13,7 @@ export const StyledWrapper = styled.div`
 export const StyledCircularBG = styled.div`
   width: 95vh;
   height: 95vh;
-  background: #ffffff;
+  background: ${() => BLUE};
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -26,13 +27,19 @@ export const StyledCircularBG = styled.div`
 `;
 
 export const StyledContentContainer = styled.main`
+  position: relative;
   height: 80%;
   width: 300px;
   box-shadow: 4px 4px 10px 5px rgba(0, 0, 0, 0.05);
+  background-image: linear-gradient(to bottom, white 50%, #f3f4f6 50%);
+  padding: 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
 
   ${media.mobile`
      width: 100vw;
      height: 100vh;
      box-shadow: 0;
+     padding: 2rem;
   `}
 `;

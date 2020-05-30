@@ -9,7 +9,7 @@ export interface WrapperProps {
   children: ReactNode;
 }
 
-const CurrencyExchangePageWrapper = ({ children }: WrapperProps) => {
+const StyledCurrencyExchangePageWrapper = ({ children }: WrapperProps) => {
   return (
     <StyledWrapper>
       <StyledCircularBG>
@@ -19,4 +19,4 @@ const CurrencyExchangePageWrapper = ({ children }: WrapperProps) => {
   );
 };
 
-export default CurrencyExchangePageWrapper;
+export default StyledCurrencyExchangePageWrapper;
