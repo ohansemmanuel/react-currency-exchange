@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { StyledSelect, StyledOption } from "./Select.styles";
 import { useEffectAfterMount } from "../../hooks/useEffectAfterMount";
 
 interface SelectProps {
@@ -14,7 +15,7 @@ interface OptionProps {
 }
 
 export const Option = ({ value, children }: OptionProps) => (
-  <option value={value}>{children}</option>
+  <StyledOption value={value}>{children}</StyledOption>
 );
 
 export const Select = ({
@@ -40,8 +41,8 @@ export const Select = ({
   const changeHandler = isControlled ? onChange : handleChange;
 
   return (
-    <select onChange={changeHandler} value={getState()}>
+    <StyledSelect onChange={changeHandler} value={getState()}>
       {children}
-    </select>
+    </StyledSelect>
   );
 };
