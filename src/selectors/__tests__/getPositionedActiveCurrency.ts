@@ -1,6 +1,6 @@
-import { getActiveCurrencies } from "../";
+import { getPositonedActiveCurrency } from "../";
 
-describe("getActiveCurrencies", () => {
+describe("getPositonedActiveCurrency", () => {
   test("it works as expected", () => {
     const state = {
       activeCurrencies: ["usd", "eur"],
@@ -21,6 +21,8 @@ describe("getActiveCurrencies", () => {
       },
     };
 
-    expect(getActiveCurrencies(state)).toEqual(state.activeCurrencies);
+    expect(
+      getPositonedActiveCurrency.resultFunc(state.activeCurrencies, 1)
+    ).toEqual(state.activeCurrencies[1]);
   });
 });

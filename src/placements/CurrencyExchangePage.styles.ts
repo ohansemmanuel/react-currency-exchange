@@ -5,6 +5,7 @@ const topBottomCSS = css`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0 10px;
 `;
 
 export const StyledTopContentWrapper = styled.section`

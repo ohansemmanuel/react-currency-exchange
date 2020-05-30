@@ -20,7 +20,6 @@ export const CurrencyExchangePage = () => {
         <StyledWrapper>
           <div>
             <CurrencySelectionContainer position={0} />
-            {/* <p>Balance: 0</p> */}
           </div>
           <div></div>
         </StyledWrapper>

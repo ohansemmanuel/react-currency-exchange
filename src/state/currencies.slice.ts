@@ -8,12 +8,15 @@ const currenciesSlice = createSlice({
   initialState: {
     eur: {
       balance: 3546,
+      symbol: "€",
     },
     usd: {
       balance: 12,
+      symbol: "$",
     },
     gpb: {
       balance: 0,
+      symbol: "£",
     },
   },
   reducers: {
