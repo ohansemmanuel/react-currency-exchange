@@ -15,6 +15,7 @@ export const StyledRateDisplayParagraph = styled(Paragraph)`
   text-align: "center";
 `;
 
+const MIN_WIDTH = 150;
 export const modifiedParagraphStyles = {
   color: BLUE,
   background: "#ffffff",
@@ -23,7 +24,7 @@ export const modifiedParagraphStyles = {
   padding: "4px 0",
   position: "absolute",
   top: "-10px",
-  left: "calc(50% - 50px)",
-  minWidth: "100px",
+  left: `calc(50% - ${MIN_WIDTH / 2}px)`,
+  minWidth: `${MIN_WIDTH}px`,
   textAlign: "center",
 };

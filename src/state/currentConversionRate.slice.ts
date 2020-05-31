@@ -1,15 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const INITIAL_IDLE_RATE = 0;
 const currentConversionRateSlice = createSlice({
   name: "currentConversionRate",
-  initialState: { rate: 1.123 },
+  initialState: { rate: INITIAL_IDLE_RATE },
   reducers: {
     updateConversionRate(state, { payload }: { payload: number }) {
       state.rate = payload;
     },
+    resetConversionRate(state) {
+      state.rate = INITIAL_IDLE_RATE;
+    },
   },
 });
 
-export const { updateConversionRate } = currentConversionRateSlice.actions;
+export const {
+  updateConversionRate,
+  resetConversionRate,
+} = currentConversionRateSlice.actions;
 
 export default currentConversionRateSlice.reducer;

@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { Base as CurrencyPayloadType } from "../api/fetchOpenExchangeRates";
 
 export enum PollingState {
-  LOADING,
+  IDLE,
   STARTED,
   STOPPED,
   FAILED,
@@ -14,7 +14,7 @@ export type PollingStartedPayloadType = {
 };
 
 const initialState: { progress: PollingState } = {
-  progress: PollingState.LOADING,
+  progress: PollingState.IDLE,
 };
 const pollingSlice = createSlice({
   name: "polling",
@@ -26,8 +26,8 @@ const pollingSlice = createSlice({
     setPollingStopped(state) {
       state.progress = PollingState.STOPPED;
     },
-    setPollingLoading(state) {
-      state.progress = PollingState.LOADING;
+    setPollingIdle(state) {
+      state.progress = PollingState.IDLE;
     },
     setPollingFailed(state) {
       state.progress = PollingState.FAILED;
@@ -38,7 +38,7 @@ const pollingSlice = createSlice({
 export const {
   setPollingStarted,
   setPollingStopped,
-  setPollingLoading,
+  setPollingIdle,
   setPollingFailed,
 } = pollingSlice.actions;
 export default pollingSlice.reducer;

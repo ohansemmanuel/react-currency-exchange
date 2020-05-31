@@ -11,6 +11,7 @@ import { AppDispatch } from "../state";
 import { setPollingStarted, setPollingStopped } from "../state/polling.slice";
 import { Base as CurrencyExchangeType } from "../api/fetchOpenExchangeRates";
 import { useEffectAfterMount } from "../hooks/useEffectAfterMount";
+import { resetConversionRate } from "../state/currentConversionRate.slice";
 
 export const RateDisplayContainer = () => {
   const [activeCurrency1, activeCurrency2] = useSelector(getActiveCurrencies);
@@ -45,6 +46,8 @@ export const RateDisplayContainer = () => {
   useEffectAfterMount(() => {
     // stop previous polling (with old base->to currencies)
     dispatch(setPollingStopped());
+    // reset current rate
+    dispatch(resetConversionRate());
     // start new poll with new currency values
     dispatch(
       setPollingStarted({
@@ -56,7 +59,9 @@ export const RateDisplayContainer = () => {
 
   return (
     <Paragraph style={modifiedParagraphStyles}>
-      &#8599; &nbsp; {`${currencySymbol1}1 = ${currencySymbol2}${exchangeRate}`}
+      &#8599; &nbsp;{" "}
+      {!!exchangeRate &&
+        `${currencySymbol1}1 = ${currencySymbol2}${exchangeRate}`}
     </Paragraph>
   );
 };
