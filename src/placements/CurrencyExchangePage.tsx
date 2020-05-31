@@ -11,6 +11,7 @@ import {
   CurrencySelectionContainer,
   CurrencySwapContainer,
 } from "../containers";
+import { RateDisplayContainer } from "../containers/RateDisplayContainer";
 
 export const CurrencyExchangePage = () => {
   return (
@@ -28,6 +29,7 @@ export const CurrencyExchangePage = () => {
       {/* Mid Content */}
       <StyledMiddleContentWrapper>
         <CurrencySwapContainer />
+        <RateDisplayContainer />
       </StyledMiddleContentWrapper>
 
       {/* Bottom Content */}

@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const currentConversionRateSlice = createSlice({
   name: "currentConversionRate",
-  initialState: { rate: 0 },
+  initialState: { rate: 1.123 },
   reducers: {
     updateConversionRate(state, { payload }: { payload: number }) {
       state.rate = payload;

@@ -1,7 +1,7 @@
 import { createSelector } from "reselect";
 import { RootState } from "../state";
 
-export const getActiveCurrencies = createSelector(
+export const getCurrentExchangeRate = createSelector(
   (state: RootState) => state,
-  (state) => state.activeCurrencies
+  (state) => state.currentConversionRate.rate
 );
