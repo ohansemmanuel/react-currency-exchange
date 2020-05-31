@@ -4,6 +4,7 @@ import activeCurrenciesReducer from "./activeCurrencies.slice";
 import currenciesReducer from "./currencies.slice";
 import currentConversionRateReducer from "./currentConversionRate.slice";
 import pollingReducer from "./polling.slice";
+import exchangeInputValuesReducer from "./exchangeInputValues.slice";
 
 export const store = configureStore({
   reducer: {
@@ -11,6 +12,7 @@ export const store = configureStore({
     currencies: currenciesReducer,
     currentConversionRate: currentConversionRateReducer,
     polling: pollingReducer,
+    exchangeInputValues: exchangeInputValuesReducer,
   },
   middleware: [sagaMiddleware, ...getDefaultMiddleware()],
 });

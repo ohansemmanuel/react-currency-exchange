@@ -17,4 +17,5 @@ export const mockState = {
       symbol: "£",
     },
   },
+  exchangeInputValues: [11.23, 34.55],
 };

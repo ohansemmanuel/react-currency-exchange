@@ -5,12 +5,15 @@ describe("activeCurrencies", () => {
     const initialState = {
       eur: {
         balance: 3546,
+        symbol: "€",
       },
       usd: {
         balance: 12,
+        symbol: "$",
       },
       gbp: {
         balance: 0,
+        symbol: "£",
       },
     };
     const expectedNewBalance = 1000;
