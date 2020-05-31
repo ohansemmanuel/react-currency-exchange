@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const currencyList = ["eur", "usd", "gpb"] as const;
+export const currencyList = ["eur", "usd", "gbp"] as const;
 export type AcceptedCurrency = typeof currencyList[number];
 
 const currenciesSlice = createSlice({
@@ -14,7 +14,7 @@ const currenciesSlice = createSlice({
       balance: 12,
       symbol: "$",
     },
-    gpb: {
+    gbp: {
       balance: 0,
       symbol: "£",
     },

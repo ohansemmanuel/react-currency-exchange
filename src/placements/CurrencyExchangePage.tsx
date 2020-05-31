@@ -10,6 +10,7 @@ import {
 import {
   CurrencySelectionContainer,
   CurrencySwapContainer,
+  PollingStopperContainer,
 } from "../containers";
 import { RateDisplayContainer } from "../containers/RateDisplayContainer";
 
@@ -30,6 +31,7 @@ export const CurrencyExchangePage = () => {
       <StyledMiddleContentWrapper>
         <CurrencySwapContainer />
         <RateDisplayContainer />
+        <PollingStopperContainer />
       </StyledMiddleContentWrapper>
 
       {/* Bottom Content */}

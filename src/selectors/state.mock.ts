@@ -12,7 +12,7 @@ export const mockState = {
       balance: 12,
       symbol: "$",
     },
-    gpb: {
+    gbp: {
       balance: 0,
       symbol: "£",
     },

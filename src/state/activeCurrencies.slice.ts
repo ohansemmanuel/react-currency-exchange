@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { AcceptedCurrency } from "./currencies.slice";
 
-const initialState: Array<AcceptedCurrency> = ["usd", "eur"];
+const initialState: AcceptedCurrency[] = ["usd", "eur"];
 const activeCurrenciesSlice = createSlice({
   name: "activeCurrencies",
   initialState,

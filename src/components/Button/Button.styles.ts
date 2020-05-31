@@ -8,6 +8,8 @@ export const StyledButtonWrapper = styled.button`
   border: ${() => `2px solid ${ASH}`};
   background: white;
   color: ${() => BLUE};
+  cursor: pointer;
+  font-weight: 700;
 
   &:active {
     border: ${() => `2px solid ${BLUE}`};

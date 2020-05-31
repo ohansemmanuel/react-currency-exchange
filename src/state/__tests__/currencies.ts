@@ -9,7 +9,7 @@ describe("activeCurrencies", () => {
       usd: {
         balance: 12,
       },
-      gpb: {
+      gbp: {
         balance: 0,
       },
     };

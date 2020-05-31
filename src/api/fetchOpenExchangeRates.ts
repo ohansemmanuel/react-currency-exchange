@@ -5,7 +5,7 @@ const APP_ID = "20f1c7c6661b4d5dbff337c73d9d251f"; // move to netlify env
 const CURRENCY_LIST = "USD,GBP,EUR";
 const DEFAULT_EXCHANGE_BASE = "USD";
 
-type Base = "USD" | "GBP" | "EUR";
+export type Base = "USD" | "GBP" | "EUR";
 
 export const fetchOpenExchangeRates = async (
   base: Base = DEFAULT_EXCHANGE_BASE
@@ -24,7 +24,6 @@ export const fetchOpenExchangeRates = async (
 
     throw new Error("failed request");
   } catch (error) {
-    // Ideally log for monitoring :)
     throw new Error(error);
   }
 };
