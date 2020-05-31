@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-import { Select, Option } from "../components/Select";
+import { Select, Option } from "../components";
 import { currencyList, AcceptedCurrency } from "../state/currencies.slice";
 import {
   setActiveCurrency,

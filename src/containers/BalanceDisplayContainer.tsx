@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { Paragraph } from "../components/Paragraph";
+import { Paragraph } from "../components";
 import { AcceptedCurrency } from "../state/currencies.slice";
 import { getCurrencyStatement } from "../selectors";
 import { useSelector } from "react-redux";

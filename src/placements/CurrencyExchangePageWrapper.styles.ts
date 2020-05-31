@@ -30,6 +30,7 @@ export const StyledContentContainer = styled.main`
   position: relative;
   height: 80%;
   width: 300px;
+  border-radius: 5px;
   box-shadow: 4px 4px 10px 5px rgba(0, 0, 0, 0.05);
   background-image: linear-gradient(to bottom, white 50%, #f3f4f6 50%);
   padding: 1rem 0.5rem;
@@ -41,5 +42,6 @@ export const StyledContentContainer = styled.main`
      height: 100vh;
      box-shadow: 0;
      padding: 2rem;
+     border-radius: 0;
   `}
 `;

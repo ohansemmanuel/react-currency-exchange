@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Paragraph } from "../components/Paragraph";
+import { Paragraph } from "../components";
 import {
   getActiveCurrencySymbols,
   getCurrentExchangeRate,

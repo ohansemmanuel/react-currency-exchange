@@ -13,6 +13,7 @@ import {
   PollingStopperContainer,
 } from "../containers";
 import { RateDisplayContainer } from "../containers/RateDisplayContainer";
+import { CurrencyInputContainer } from "../containers/CurrencyInputContainer";
 
 export const CurrencyExchangePage = () => {
   return (
@@ -23,7 +24,9 @@ export const CurrencyExchangePage = () => {
           <div>
             <CurrencySelectionContainer position={0} />
           </div>
-          <div></div>
+          <div>
+            <CurrencyInputContainer position={0} />
+          </div>
         </StyledWrapper>
       </StyledTopContentWrapper>
 
@@ -39,6 +42,9 @@ export const CurrencyExchangePage = () => {
         <StyledWrapper>
           <div>
             <CurrencySelectionContainer position={1} />
+          </div>
+          <div>
+            <CurrencyInputContainer position={1} />
           </div>
         </StyledWrapper>
       </StyledBottomContentWrapper>
