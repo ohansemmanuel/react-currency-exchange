@@ -56,7 +56,7 @@ export const CurrencySelectionContainer = ({
           </Option>
         ))}
       </Select>
-      <BalanceDisplayContainer currency={activeCurrency} />
+      <BalanceDisplayContainer currency={activeCurrency} position={position} />
     </>
   );
 };

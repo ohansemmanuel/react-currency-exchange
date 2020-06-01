@@ -4,6 +4,7 @@ import { BLUE } from "../../colors";
 export const StyledInput = styled.input`
   font-weight: 700;
   font-size: 16px;
+  line-height: 1.3;
   padding: 0.6em 1.4em 0.5em 0.8em;
   width: 120px;
   border: 0;
