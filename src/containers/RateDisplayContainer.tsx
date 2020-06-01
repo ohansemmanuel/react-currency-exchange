@@ -55,7 +55,7 @@ export const RateDisplayContainer = () => {
         to: currencyExchangeTo,
       })
     );
-  }, [currencySymbol1, currencySymbol2]);
+  }, [currencyExchangeBase, currencyExchangeTo]);
 
   return (
     <Paragraph style={modifiedParagraphStyles}>

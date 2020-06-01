@@ -1,6 +1,6 @@
-import currencies, { updateBalance } from "../currencies.slice";
+import currenciesReducer, { updateBalance } from "../currencies.slice";
 
-describe("activeCurrencies", () => {
+describe("currenciesReducer", () => {
   test("it should handle updateBalance", () => {
     const initialState = {
       eur: {
@@ -18,7 +18,7 @@ describe("activeCurrencies", () => {
     };
     const expectedNewBalance = 1000;
 
-    const newState = currencies(initialState, {
+    const newState = currenciesReducer(initialState, {
       type: updateBalance.type,
       payload: { currency: "usd", balance: expectedNewBalance },
     });

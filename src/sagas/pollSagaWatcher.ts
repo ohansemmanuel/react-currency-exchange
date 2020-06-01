@@ -13,10 +13,10 @@ export type WatchedPollingActionType = {
 
 export function* pollSagaWatcher() {
   // while (true) {
-  // const action: WatchedPollingActionType = yield take(setPollingStarted.type);
-  // yield race([
-  //   call(() => pollSagaWorker(action)),
-  //   take(setPollingStopped.type),
-  // ]);
+  //   const action: WatchedPollingActionType = yield take(setPollingStarted.type);
+  //   yield race([
+  //     call(() => pollSagaWorker(action)),
+  //     take(setPollingStopped.type),
+  //   ]);
   // }
 }

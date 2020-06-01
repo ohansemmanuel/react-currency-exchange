@@ -1,13 +1,13 @@
-import currentConversionRate, {
+import currentConversionRateReducer, {
   updateConversionRate,
 } from "../currentConversionRate.slice";
 
-describe("currentConversionRate", () => {
+describe("currentConversionRateReducer", () => {
   test("it should handle updateConversionRate", () => {
     const initialState = { rate: 10 };
     const expectedNewRate = 1.343;
 
-    const newState = currentConversionRate(initialState, {
+    const newState = currentConversionRateReducer(initialState, {
       type: updateConversionRate.type,
       payload: expectedNewRate,
     });

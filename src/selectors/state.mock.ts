@@ -17,5 +17,9 @@ export const mockState = {
       symbol: "£",
     },
   },
+  polling: {
+    progress: 1,
+  },
   exchangeInputValues: [11.23, 34.55],
+  lastTouchedInputPosition: { position: 0 },
 };

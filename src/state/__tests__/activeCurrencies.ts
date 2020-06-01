@@ -1,15 +1,15 @@
-import activeCurrencies, {
+import activeCurrenciesReducer, {
   reverseActiveCurrencies,
   setActiveCurrency,
 } from "../activeCurrencies.slice";
 import { AcceptedCurrency } from "../currencies.slice";
 
-describe("activeCurrencies", () => {
+describe("activeCurrenciesReducer", () => {
   test("it should handle reverseActiveCurrencies", () => {
     const initialState: AcceptedCurrency[] = ["usd", "eur"];
     const expectedReversedState = ["eur", "usd"];
 
-    const newState = activeCurrencies(initialState, {
+    const newState = activeCurrenciesReducer(initialState, {
       type: reverseActiveCurrencies.type,
     });
     expect(newState).toEqual(expectedReversedState);
@@ -18,7 +18,7 @@ describe("activeCurrencies", () => {
   test("it should handle setActiveCurrency", () => {
     const initialState: AcceptedCurrency[] = ["usd", "eur"];
     const expectedState = ["usd", "sed"];
-    const newState = activeCurrencies(initialState, {
+    const newState = activeCurrenciesReducer(initialState, {
       type: setActiveCurrency.type,
       payload: {
         currency: "sed",

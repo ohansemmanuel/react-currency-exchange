@@ -50,7 +50,9 @@ export const CurrencyInputContainer = ({
   };
 
   useEffectAfterMount(() => {
-    handleInputValuesUpdate(inputValue);
+    if (currentExchangeRate && inputValue) {
+      handleInputValuesUpdate(inputValue);
+    }
   }, [currentExchangeRate]);
 
   const handleChange = (evt: React.SyntheticEvent<HTMLInputElement>) => {
