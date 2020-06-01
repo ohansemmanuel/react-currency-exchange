@@ -6,6 +6,7 @@ import currentConversionRateReducer from "./currentConversionRate.slice";
 import pollingReducer from "./polling.slice";
 import exchangeInputValuesReducer from "./exchangeInputValues.slice";
 import lastTouchedInputPositionReducer from "./lastTouchedInputPosition.slice";
+import { exchangeMiddleware } from "../middleware";
 
 export const store = configureStore({
   reducer: {
@@ -16,7 +17,7 @@ export const store = configureStore({
     exchangeInputValues: exchangeInputValuesReducer,
     lastTouchedInputPosition: lastTouchedInputPositionReducer,
   },
-  middleware: [sagaMiddleware, ...getDefaultMiddleware()],
+  middleware: [sagaMiddleware, exchangeMiddleware, ...getDefaultMiddleware()],
 });
 
 //@ts-ignore
