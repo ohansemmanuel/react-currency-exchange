@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useEffect, useRef } from "react";
 import { Input } from "../components/Input";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../state";
@@ -19,7 +19,7 @@ const makeGetPositionedExchangeInputValue = () =>
 export const CurrencyInputContainer = ({
   position,
 }: CurrencyInputContainerProps) => {
-  const dispatch = useDispatch<AppDispatch>();
+  const inputElementRef = useRef<HTMLInputElement | null>(null);
 
   const selectPositionedExchangeInputValue = useMemo(
     makeGetPositionedExchangeInputValue,
@@ -29,26 +29,37 @@ export const CurrencyInputContainer = ({
     selectPositionedExchangeInputValue(state, position)
   );
   const currentExchangeRate = useSelector(getCurrentExchangeRate);
+  const dispatch = useDispatch<AppDispatch>();
 
   const handleInputValuesUpdate = (value: number) => {
-    // set current input value
-    dispatch(
-      setExchangeInputValues({
-        value,
-        position,
-      })
-    );
-    // set other input value
-    dispatch(
-      setExchangeInputValues({
-        value: position
-          ? value / currentExchangeRate
-          : currentExchangeRate * value,
-        position: position ? 0 : 1,
-      })
-    );
+    if (value) {
+      // set current input value
+      dispatch(
+        setExchangeInputValues({
+          value,
+          position,
+        })
+      );
+      // set other input value
+      dispatch(
+        setExchangeInputValues({
+          value: position
+            ? value / currentExchangeRate
+            : currentExchangeRate * value,
+          position: position ? 0 : 1,
+        })
+      );
+    }
   };
 
+  // Simple Focus Mgt.
+  useEffect(() => {
+    if (position === 0) {
+      inputElementRef?.current?.focus();
+    }
+  }, []);
+
+  // input value update
   useEffectAfterMount(() => {
     if (currentExchangeRate && inputValue) {
       handleInputValuesUpdate(inputValue);
@@ -60,5 +71,7 @@ export const CurrencyInputContainer = ({
     handleInputValuesUpdate(value);
   };
 
-  return <Input value={inputValue} onChange={handleChange} />;
+  return (
+    <Input value={inputValue} onChange={handleChange} ref={inputElementRef} />
+  );
 };
