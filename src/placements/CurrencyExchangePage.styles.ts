@@ -1,19 +1,11 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
-const topBottomCSS = css`
+export const StyledTopBottomContentWrapper = styled.section`
   flex: 0 1 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 0 10px;
-`;
-
-export const StyledTopContentWrapper = styled.section`
-  ${topBottomCSS}
-`;
-
-export const StyledBottomContentWrapper = styled.section`
-  ${topBottomCSS}
 `;
 
 const MiddleContentHeight = 30;

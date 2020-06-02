@@ -2,9 +2,8 @@ import React from "react";
 
 import StyledCurrencyExchangePageWrapper from "./CurrencyExchangePageWrapper";
 import {
-  StyledTopContentWrapper,
+  StyledTopBottomContentWrapper,
   StyledMiddleContentWrapper,
-  StyledBottomContentWrapper,
   StyledWrapper,
 } from "./CurrencyExchangePage.styles";
 import {
@@ -17,7 +16,7 @@ import { CurrencyInputContainer } from "../containers/CurrencyInputContainer";
 import { ExchangeButtonContainer } from "../containers/ExchangeButtonContainer";
 
 const TopBottomContent = ({ position }: { position: 0 | 1 }) => (
-  <StyledTopContentWrapper>
+  <StyledTopBottomContentWrapper>
     <StyledWrapper>
       <div>
         <CurrencySelectionContainer position={position} />
@@ -27,7 +26,7 @@ const TopBottomContent = ({ position }: { position: 0 | 1 }) => (
       </div>
     </StyledWrapper>
     {position === 1 && <ExchangeButtonContainer />}
-  </StyledTopContentWrapper>
+  </StyledTopBottomContentWrapper>
 );
 
 export const CurrencyExchangePage = () => {
