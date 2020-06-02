@@ -58,7 +58,7 @@ export const CurrencyInputContainer = ({
     if (position === 0) {
       inputElementRef?.current?.focus();
     }
-  }, []);
+  }, [position]); //position never changes.
 
   // input value update
   useEffectAfterMount(() => {
