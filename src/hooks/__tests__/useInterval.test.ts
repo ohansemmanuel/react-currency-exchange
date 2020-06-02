@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { renderHook } from "@testing-library/react-hooks";
 import { useIntervalTest } from "../useIntervalTest";
 

@@ -1,4 +1,4 @@
-import { isEmptyObject } from "../";
+import { isEmptyObject } from "..";
 
 describe("isEmptyObject", () => {
   test("should be true with no arguments", () => {

@@ -1,4 +1,4 @@
-import { getActiveCurrencySymbols } from "../";
+import { getActiveCurrencySymbols } from "..";
 import { mockState } from "../state.mock";
 
 describe("getActiveCurrencySymbols", () => {

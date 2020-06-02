@@ -1,4 +1,4 @@
-import { objectToQueryParams } from "../";
+import { objectToQueryParams } from "..";
 
 describe("objectToQueryParams", () => {
   test("with no parameters", () => {

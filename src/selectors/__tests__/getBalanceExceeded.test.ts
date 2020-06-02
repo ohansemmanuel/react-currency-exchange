@@ -1,4 +1,4 @@
-import { getBalanceExceeded } from "../";
+import { getBalanceExceeded } from "..";
 import { mockState } from "../state.mock";
 
 describe("getBalanceExceeded", () => {

@@ -1,4 +1,4 @@
-import { getLastTouchedInputPosition } from "../";
+import { getLastTouchedInputPosition } from "..";
 import { mockState } from "../state.mock";
 
 describe("getActiveCurrencies", () => {
