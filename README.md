@@ -2,8 +2,6 @@
 
 ### Demo real world app with React + Redux Toolkit
 
-![Currency Exchange](https://shrtm.nu/bfiE)
-
 ## State
 
 A modified version of the [ducks pattern](https://github.com/erikras/ducks-modular-redux) is used.
@@ -25,16 +23,22 @@ A modified version of the [ducks pattern](https://github.com/erikras/ducks-modul
 
 ### Toggle Exchange Currency
 
-![Toggle Exchange Currency](https://shrtm.nu/i2Nw)
+![Toggle Exchange Currency](https://i.imgur.com/YQm8MbS.png)
 
 ### Show plus and minus signs for exchange
 
-![https://cln.sh/10Oikk](https://shrtm.nu/MflY)
+![Shpw plus and minus signs](https://i.imgur.com/7y5n4SI.png)
 
 ### Show minimum exchange amount
 
-![https://cln.sh/03YkXY](https://shrtm.nu/8V7y)
+![Minimum exchange amount](https://i.imgur.com/YydEwtu.png)
+
+### Balance Exceeded?
+
+![Balance exceeded](https://i.imgur.com/Jbw9CLI.png)
 
 ### Stop polling (useful for manual testing)
 
-![https://cln.sh/FTRmEN](https://shrtm.nu/0n2q)
+Current exchange rate is polled every 10s. It may be useful to stop polling to prevent overflowing to daily rate limit :)
+
+![Stop Polling](https://i.imgur.com/TlnEf1g.png)
