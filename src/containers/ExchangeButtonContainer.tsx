@@ -21,7 +21,7 @@ export const ExchangeButtonContainer = () => {
   const exchangeValueLessThanMinimum = useSelector(getExchangeLessThanMinimum);
 
   const handleExchange = () => {
-    dispatch(exchangeAction());
+    dispatch(exchangeAction(null));
     dispatch(
       setExchangeInputValues({ value: 0, stringValue: "0", position: 0 })
     );

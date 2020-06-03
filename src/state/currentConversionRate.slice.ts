@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const INITIAL_IDLE_RATE = 1.242;
+const INITIAL_IDLE_RATE = 0;
 const currentConversionRateSlice = createSlice({
   name: "currentConversionRate",
   initialState: { rate: INITIAL_IDLE_RATE },

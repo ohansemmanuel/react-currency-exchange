@@ -22,6 +22,7 @@ export const Button = ({
       style={style}
       cta={cta}
       disabled={disabled}
+      data-testid={cta && "exchange-btn"}
     >
       {children}
     </StyledButtonWrapper>

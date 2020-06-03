@@ -20,6 +20,7 @@ export const getMockedResponse = (newBase?: "GBP" | "EUR") => ({
 });
 
 export const initMock = () => {
+  fetchMock.config.overwriteRoutes = true;
   fetchMock.get(`begin:${BASE_URL}`, {
     status: 200,
     body: getMockedResponse().default,

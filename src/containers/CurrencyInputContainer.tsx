@@ -14,6 +14,7 @@ import { Paragraph } from "../components";
 import { GRAY, PINK } from "../colors";
 import { getPositionedExchangeInputStringValue } from "../selectors/getPositionedExchangeInputStringValue";
 import { removeLeadingZero, removeCommas } from "../utils";
+import { roundToTwoDecimalPlaces } from "../utils/roundToTwoDecimalPlaces";
 
 interface CurrencyInputContainerProps {
   position: 0 | 1;
@@ -67,8 +68,7 @@ export const CurrencyInputContainer = ({
       : currentExchangeRate * value;
 
     // make sure this is formatted to 2 decimal places
-    const formattedPositionalValue =
-      Math.round((positionalValue + Number.EPSILON) * 100) / 100;
+    const formattedPositionalValue = roundToTwoDecimalPlaces(positionalValue);
 
     dispatch(
       setExchangeInputValues({

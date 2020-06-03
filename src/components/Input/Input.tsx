@@ -33,6 +33,7 @@ export const Input = forwardRef(
           ref={ref}
           style={style}
           placeholder="0"
+          data-testid={`exchange-input-${position}`}
         />
       </StyledInputWrapper>
     );

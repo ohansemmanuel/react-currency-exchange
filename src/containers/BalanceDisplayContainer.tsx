@@ -29,7 +29,11 @@ export const BalanceDisplayContainer = ({
   );
 
   return (
-    <Paragraph small style={updatedParagraphStyle}>{`Balance: ${symbol}${
+    <Paragraph
+      small
+      style={updatedParagraphStyle}
+      dataTestId={`balance-statement-${currency}`}
+    >{`Balance: ${symbol}${
       balance >= 1000 ? new Intl.NumberFormat().format(balance) : balance
     }`}</Paragraph>
   );

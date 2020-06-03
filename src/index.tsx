@@ -6,13 +6,14 @@ import { CurrencyExchangePage } from "./placements";
 import * as serviceWorker from "./serviceWorker";
 import "./index.css";
 
-ReactDOM.render(
+export const App = () => (
   <React.StrictMode>
     <Provider store={store}>
       <CurrencyExchangePage />
     </Provider>
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );
+
+ReactDOM.render(<App />, document.getElementById("root"));
 
 serviceWorker.unregister();

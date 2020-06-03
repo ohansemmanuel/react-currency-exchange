@@ -15,7 +15,9 @@ interface OptionProps {
 }
 
 export const Option = ({ value, children }: OptionProps) => (
-  <StyledOption value={value}>{children}</StyledOption>
+  <StyledOption value={value} data-testid={`select-${value}`}>
+    {children}
+  </StyledOption>
 );
 
 export const Select = ({
