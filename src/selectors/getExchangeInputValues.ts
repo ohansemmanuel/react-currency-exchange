@@ -3,5 +3,5 @@ import { RootState } from "../state";
 
 export const getExchangeInputValues = createSelector(
   (state: RootState) => state,
-  (state) => state.exchangeInputValues
+  (state) => state.exchangeInputValues.map((v) => v.inputValue)
 );

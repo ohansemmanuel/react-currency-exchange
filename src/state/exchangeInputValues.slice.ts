@@ -2,17 +2,29 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const exchangeInputValues = createSlice({
   name: "exchangeInputValues",
-  initialState: [0, 0],
+  initialState: [
+    {
+      inputStringValue: "0",
+      inputValue: 0,
+    },
+    {
+      inputStringValue: "0",
+      inputValue: 0,
+    },
+  ],
   reducers: {
     reverseExchangeInputValues(state) {
       state.reverse();
     },
     setExchangeInputValues(
       state,
-      { payload }: { payload: { value: number; position: 0 | 1 } }
+      {
+        payload,
+      }: { payload: { value: number; stringValue: string; position: 0 | 1 } }
     ) {
-      const { position, value } = payload;
-      state[position] = value;
+      const { position, value, stringValue } = payload;
+      state[position].inputValue = value;
+      state[position].inputStringValue = stringValue;
     },
   },
 });

@@ -20,6 +20,9 @@ export const mockState = {
   polling: {
     progress: 1,
   },
-  exchangeInputValues: [11.23, 34.55],
+  exchangeInputValues: [
+    { inputStringValue: "11.0", inputValue: 11 },
+    { inputStringValue: "34.55", inputValue: 34.55 },
+  ],
   lastTouchedInputPosition: { position: 0 },
 };

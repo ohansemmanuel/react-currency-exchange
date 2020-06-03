@@ -20,7 +20,8 @@ export const exchangeMiddleware: Middleware = ({ getState, dispatch }) => (
       type: updateBalance.type,
       payload: {
         currency: currencyFrom,
-        balance: state.currencies[currencyFrom].balance - currencyFromValue,
+        balance:
+          state.currencies[currencyFrom].balance - currencyFromValue.inputValue,
       },
     });
 
@@ -29,7 +30,8 @@ export const exchangeMiddleware: Middleware = ({ getState, dispatch }) => (
       type: updateBalance.type,
       payload: {
         currency: currencyTo,
-        balance: state.currencies[currencyTo].balance + currencyToValue,
+        balance:
+          state.currencies[currencyTo].balance + currencyToValue.inputValue,
       },
     });
   }

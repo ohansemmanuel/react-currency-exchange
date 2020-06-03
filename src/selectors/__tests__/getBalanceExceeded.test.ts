@@ -6,7 +6,10 @@ describe("getBalanceExceeded", () => {
     expect(
       getBalanceExceeded({
         ...mockState,
-        exchangeInputValues: [10, 34.55],
+        exchangeInputValues: [
+          { inputStringValue: "10.0", inputValue: 10 },
+          { inputStringValue: "34.55", inputValue: 34.55 },
+        ],
       })
     ).toBeFalsy();
   });
@@ -14,7 +17,10 @@ describe("getBalanceExceeded", () => {
     expect(
       getBalanceExceeded({
         ...mockState,
-        exchangeInputValues: [100, 34.55],
+        exchangeInputValues: [
+          { inputStringValue: "100.0", inputValue: 100 },
+          { inputStringValue: "34.55", inputValue: 34.55 },
+        ],
       })
     ).toBeTruthy();
   });

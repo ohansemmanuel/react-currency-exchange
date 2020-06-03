@@ -4,6 +4,8 @@ export { getCurrencyStatement } from "./getCurrencyStatement";
 export { getActiveCurrencySymbols } from "./getActiveCurrencySymbols";
 export { getCurrentExchangeRate } from "./getCurrentExchangeRate";
 export { getExchangeInputValues } from "./getExchangeInputValues";
+export { getExchangeInputStringValues } from "./getExchangeInputStringValues";
 export { getPositionedExchangeInputValue } from "./getPositionedExchangeInputValue";
 export { getLastTouchedInputPosition } from "./getLastTouchedInputPosition";
 export { getBalanceExceeded } from "./getBalanceExceeded";
+export { getExchangeLessThanMinimum } from "./getExchangeLessThanMinimum";
