@@ -2,7 +2,7 @@ import { Middleware, createAction } from "@reduxjs/toolkit";
 import { RootState } from "../state";
 import { updateBalance } from "../state/currencies.slice";
 
-export const exchangeAction = createAction("EXCHANGE");
+export const exchangeAction = createAction<null>("EXCHANGE");
 
 // ideally, exchage may call the backend to update user's balance.
 // Keep this centralised in this custom middleware.
