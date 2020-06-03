@@ -1,7 +1,9 @@
 import { objectToQueryParams } from "../utils";
 
 export const BASE_URL = "https://openexchangerates.org/api/latest.json";
-const APP_ID = "20f1c7c6661b4d5dbff337c73d9d251f"; // move to netlify env
+
+// This should NEVER be done in a real world app. Will leave here for ease. ID will eventually be deactivated.
+const APP_ID = "20f1c7c6661b4d5dbff337c73d9d251f";
 const CURRENCY_LIST = "USD,GBP,EUR";
 const DEFAULT_EXCHANGE_BASE = "USD";
 
