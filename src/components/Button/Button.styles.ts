@@ -31,4 +31,7 @@ export const StyledButtonWrapper = styled.button<{ cta?: boolean }>`
     border: ${() => `2px solid ${BLUE}`};
     color: black;
   }
+  &:focus {
+    border: ${() => `2px solid ${BLUE}`};
+  }
 `;
