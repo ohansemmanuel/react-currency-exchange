@@ -90,6 +90,7 @@ export const CurrencyInputContainer = ({
   const [isEditingInputValue, setIsEditingInputValue] = useState<boolean>(
     false
   );
+  const resetIsEditing = () => setIsEditingInputValue(false);
 
   // update input values when exchange rate updates
   useEffectAfterMount(() => {
@@ -112,8 +113,6 @@ export const CurrencyInputContainer = ({
 
     handleInputValuesUpdate(Number(acceptedValue), acceptedValue);
   };
-
-  const resetIsEditing = () => setIsEditingInputValue(false);
 
   const updatedInputStyle = useMemo(
     () => (position === 0 && balanceExceeded ? { color: GRAY } : {}),
