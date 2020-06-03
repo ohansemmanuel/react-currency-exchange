@@ -29,5 +29,4 @@ export const StyledSuffixWrapper = styled.div`
   font-size: 15px;
   line-height: 1.3;
   margin-right: 5px;
-  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
 `;
